@@ -10,15 +10,14 @@ global:
 replicaCount: 1
 
 image:
-  registry: ""
-  repository: onosproject/onos-kpimon
-  tag: '{{ .Chart.AppVersion }}'
-  pullPolicy: IfNotPresent
+  repository: image1
+  tag: latest
+  pullPolicy: Never
   pullSecrets: []
 
 imagePullSecrets: []
 nameOverride: ""
-fullnameOverride: "onos-kpimon"
+fullnameOverride: "kpi_rsm"
 
 storage: {}
 
