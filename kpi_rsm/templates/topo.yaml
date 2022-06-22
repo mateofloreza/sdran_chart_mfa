@@ -1,0 +1,28 @@
+apiVersion: topo.onosproject.org/v1beta1
+kind: Kind
+metadata:
+  name: o1t
+spec:
+  aspects: {}
+
+---
+# The onos-kpimon Configurable kind
+apiVersion: topo.onosproject.org/v1beta1
+kind: Entity
+metadata:
+  name: kpi_rsm
+spec:
+  uri: kpi_rsm
+  kind:
+    name: o1t
+  aspects:
+    onos.topo.Configurable:
+      address: kpi_rsm:9339
+      version: 1.0.0
+      type: ric
+      target: kpi_rsm
+    onos.topo.TLSOptions:
+      insecure: true
+    onos.topo.Asset:
+      name: kpi_rsm
+    onos.topo.MastershipState: {}
